@@ -33,20 +33,9 @@ Before you begin, ensure you have the following installed on your system:
 - **Mailpit** - Local email testing server (for testing email notifications)
 - **SQLite** - Default database (file-based, no additional setup required)
 
-### System Requirements
-- **Operating System**: Windows 10+, macOS 10.15+, Ubuntu 18.04+ or equivalent Linux distribution
-- **Memory**: Minimum 512MB RAM (1GB recommended)
-- **Disk Space**: 200MB free space
-
 ## 🛠️ Installation & Setup
 
-### 1. Unzip & Go to Project location
-```bash
-cd /path/to/your/projects
-cd bookeasy-backend
-```
-
-### 2. Project Setup
+### 1. Project Setup
 ```bash
 composer setup
 ```
@@ -57,7 +46,7 @@ Composer setup script will perform following
 - Generate application key
 - Migration and seeding of database
 
-### 3. Configure Environment Variables
+### 2. Configure Environment Variables
 
 Edit your `.env` file and update the following values:
 
@@ -74,7 +63,7 @@ MAX_BOOKING_DAYS_IN_FUTURE=60
 
 > **⚠️ Important**: The `APP_TOKEN` value must be identical in both backend and frontend applications for API communication to work properly.
 
-### 4. Start the Development Server
+### 3. Start the Development Server
 ```bash
 # Start Laravel development server
 php artisan serve
@@ -82,7 +71,7 @@ php artisan serve
 # The application will be available at: http://127.0.0.1:8000
 ```
 
-### 7. (Optional) Start Background Services
+### 4. (Optional) Start Background Services
 ```bash
 # Start queue worker for email processing
 php artisan queue:work --tries=1
